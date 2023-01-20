@@ -1,7 +1,7 @@
 """Template test module."""
 import pytest
-from amiga_package import __version__
-from amiga_package import ops
+from virtual_joystick import __version__
+from virtual_joystick import ops
 
 # import the internal libs and test
 
