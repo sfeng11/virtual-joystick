@@ -460,7 +460,8 @@ class VirtualJoystickApp(App):
         while True:
             msg: canbus_pb2.RawCanbusMessage = make_amiga_rpdo1_proto(
                 state_req=AmigaControlState.STATE_AUTO_ACTIVE,
-                cmd_speed=self.max_speed * joystick.joystick_pose.y,
+                #cmd_speed=self.max_speed * joystick.joystick_pose.y,
+		cmd_speed=self.max_speed*0.1,
                 cmd_ang_rate=self.max_angular_rate * -joystick.joystick_pose.x,
             )
             yield canbus_pb2.SendCanbusMessageRequest(message=msg)
